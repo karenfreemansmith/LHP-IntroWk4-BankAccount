@@ -6,11 +6,40 @@
     <meta name="viewport" value="width=device-width, initial-scale=1">
     <title>Bank Account</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
+
     <div class="container">
-      <h1>Bank Account</h1>
+      <h1><i class="fa fa-bank"></i> Bank Account</h1>
+      <button id="open" class="pull-right">Open Account</button>
+      <button id="change" class="pull-right">Transactions</button>
+      <button id="view" class="pull-right">Check Balance</button>
+      <div id="openAccount">
+        <h3>Open Account</h3>
+        <form id="formOpenAccount">
+          <label>First Name</label> <input type="text" id="firstname">
+          <label>Last Name</label> <input type="text" id="lastname"><br>
+          <label>Initial Deposit Amount:</label> <input type="number" id="initialdeposit">
+          <button id="newAccount">Open Account</button>
+        </form>
+      </div>
+      <div id="transactions">
+        <h3>Deposit/Withdrawal</h3>
+        <form id="formTransactions">
+          <label>Amount: </label> <input type="number">
+          <label>Type: </label>
+          <input type="radio" name="transactionType"> deposit
+          <input type="radio" name="transactionType"> withdrawal
+          <button id="submitTransaction">Complete Transaction</button>
+        </form>
+      </div>
+      <div id="showBalance">
+        <h3>Account Balance</h3>
+        <h4 id="currentBalance"></h4>
+        <ul id="transactionRecord"></ul>
+      </div>
     </div>
   <script src="js/jquery-1.12.2.js"></script>
   <script src="js/bootstrap.js"></script>
