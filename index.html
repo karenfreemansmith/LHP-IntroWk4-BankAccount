@@ -28,10 +28,11 @@
       <div id="transactions">
         <h3>Deposit/Withdrawal</h3>
         <form id="formTransactions">
-          <label>Amount: </label> <input type="number">
+          <label>Amount: </label> <input type="number" id="transactionAmount">
           <label>Type: </label>
-          <input type="radio" name="transactionType"> deposit
-          <input type="radio" name="transactionType"> withdrawal
+          <input type="radio" name="transactionType" value=1> deposit
+          <input type="radio" name="transactionType" value=2> withdrawal
+          <br><label>Note: </label> <input type="text" id="transactionNote">
           <button id="submitTransaction">Complete Transaction</button>
         </form>
       </div>
